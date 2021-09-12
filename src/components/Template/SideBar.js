@@ -7,10 +7,10 @@ const SideBar = () => (
   <section id="sidebar">
     <section id="intro">
       <Link to="/" className="logo">
-        <img src={`${PUBLIC_URL}/images/logo-9aha.png`} alt="" />
+        <img src={`${PUBLIC_URL}/images/profile.png`} alt="" />
       </Link>
       <header>
-        <h2>Modern Aesthetics and Beyond</h2>
+        <h2>Personal Amazon Picks</h2>
       </header>
     </section>
 
