@@ -72,11 +72,7 @@
 				@include vendor('transition', 'transform #{_duration(transition)} ease-out');
 			}
 
-			&:hover {
-				img {
-					@include vendor('transform', 'scale(1.05)');
-				}
-			}
+
 		}
 
 		> footer {
