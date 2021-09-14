@@ -6,19 +6,9 @@
 
 /* Main */
 
-	#main {
-		@include vendor('flex-grow', '1');
-		-ms-flex: 1;
-		width: 100%;
-	}
-	.countdown{
-		display:flex;
-		justify-content: space-around;
-		text-align: center;
-	}
-	.day,
-	.hour,
-	.minute,
-	.second{
-		font-size: 3rem;
-	}
+#main {
+	@include vendor('flex-grow', '1');
+	-ms-flex: 1;
+	flex:1;
+	width: 100%;
+}
