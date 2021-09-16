@@ -8,11 +8,11 @@ const Table = ({ data }) => (
     <tbody>
       {data.map((pair) => (
         <TableRow
+          value={pair.value}
           format={pair.format}
           key={pair.label}
           label={pair.label}
           link={pair.link}
-          value={pair.value}
         />
       ))}
     </tbody>
@@ -22,13 +22,13 @@ const Table = ({ data }) => (
 Table.propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape({
     format: PropTypes.func,
-    label: PropTypes.string.isRequired,
     link: PropTypes.string,
     value: PropTypes.oneOfType([
       PropTypes.element,
       PropTypes.number,
       PropTypes.string,
     ]),
+    label: PropTypes.string.isRequired,
   })).isRequired,
 };
 

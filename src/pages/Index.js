@@ -4,6 +4,7 @@ import Main from '../layouts/Main';
 
 import Cell from '../components/Projects/Cell';
 import data from '../data/projects';
+import Personal from '../components/Stats/Personal';
 
 const Index = () => (
   <Main
@@ -14,9 +15,9 @@ const Index = () => (
         <div className="title">
           <div>
             <h2>
-              we are opening soon!
+              we are opening soon <Personal />
             </h2>
-            <p>hihi</p>
+            <p>hihi </p>
           </div>
         </div>
       </header>
