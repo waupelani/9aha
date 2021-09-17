@@ -2,19 +2,29 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const TableRow = ({
-  label, link, value, format,
+  link, format, hours, minutes, seconds,
 }) => (
   <tr>
-    <td width="70%">{label}</td>
-    <td>{link ? <a href={link}>{format(value)}</a> : format(value)}</td>
+    <td>{link ? <a href={link}>{format(hours)}</a> : format(hours)}</td>
+    <td>{link ? <a href={link}>{format(minutes)}</a> : format(minutes)}</td>
+    <td width="50%">{seconds}</td>
   </tr>
 );
 
 TableRow.propTypes = {
   format: PropTypes.func,
-  label: PropTypes.string.isRequired,
   link: PropTypes.string,
-  value: PropTypes.oneOfType([
+  hours: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.number,
+    PropTypes.string,
+  ]),
+  minutes: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.number,
+    PropTypes.string,
+  ]),
+  seconds: PropTypes.oneOfType([
     PropTypes.element,
     PropTypes.number,
     PropTypes.string,
@@ -24,7 +34,9 @@ TableRow.propTypes = {
 TableRow.defaultProps = {
   format: (x) => x,
   link: null,
-  value: null,
+  hours: null,
+  minutes: null,
+  seconds: null,
 };
 
 export default TableRow;

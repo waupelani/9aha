@@ -1,30 +1,71 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
 
-const TableColumn = ({
-  value, format, label, link,
-}) => (
-  <tr>
-    <td width="90%">{label}</td>
-    <td>{link ? <a href={link}>{format(value)}</a> : format(value)}</td>
-  </tr>
-);
+const endTime = new Date('2021-09-16T03:00:00');
 
-TableColumn.propTypes = {
-  format: PropTypes.func,
-  label: PropTypes.string.isRequired,
-  link: PropTypes.string,
-  value: PropTypes.oneOfType([
-    PropTypes.element,
-    PropTypes.number,
-    PropTypes.string,
-  ]),
+const Hour = () => {
+  const [hour, setHour] = useState();
+  const tick = () => {
+    const divisor = 1000 * 60 * 60; // seconds in a hour
+    setHour(Math.floor(((endTime - Date.now()) / divisor) % 24));
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => tick());
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+  return <>{hour}</>;
 };
 
-TableColumn.defaultProps = {
-  format: (x) => x,
-  link: null,
-  value: null,
+const Minute = () => {
+  const [minute, setMinute] = useState();
+  const tick = () => {
+    const divisor = 1000 * 60; // seconds in a hour
+    setMinute(Math.floor(((endTime - Date.now()) / divisor) % 60));
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => tick());
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+  return <>{minute}</>;
 };
 
-export default TableColumn;
+const Second = () => {
+  const [second, setSecond] = useState();
+  const tick = () => {
+    const divisor = 1000; // seconds in a hour
+    setSecond(Math.floor(((endTime - Date.now()) / divisor) % 60));
+  };
+
+  useEffect(() => {
+    const timer = setInterval(() => tick());
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+  return <>{second}</>;
+};
+
+const timedata = [
+  {
+    key: 'age',
+    label: 'Hours remaining',
+    value: <Hour />,
+  },
+  {
+    key: 'age',
+    label: 'Minutes remaining',
+    value: <Minute />,
+  },
+  {
+    key: 'age',
+    label: 'Seconds remaining',
+    value: <Second />,
+  },
+];
+
+export default timedata;

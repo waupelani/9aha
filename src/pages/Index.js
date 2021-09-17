@@ -15,9 +15,9 @@ const Index = () => (
         <div className="title">
           <div>
             <h2>
-              we are opening soon <Personal />
+              Deal Ends in..
             </h2>
-            <p>hihi </p>
+            <p><Personal /></p>
           </div>
         </div>
       </header>

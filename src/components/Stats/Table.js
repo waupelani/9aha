@@ -8,11 +8,9 @@ const Table = ({ data }) => (
     <tbody>
       {data.map((pair) => (
         <TableRow
-          value={pair.value}
-          format={pair.format}
-          key={pair.label}
-          label={pair.label}
-          link={pair.link}
+          hours={pair.hours}
+          minutes={pair.minutes}
+          seconds={pair.seconds}
         />
       ))}
     </tbody>
@@ -23,12 +21,21 @@ Table.propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape({
     format: PropTypes.func,
     link: PropTypes.string,
-    value: PropTypes.oneOfType([
+    hours: PropTypes.oneOfType([
       PropTypes.element,
       PropTypes.number,
       PropTypes.string,
     ]),
-    label: PropTypes.string.isRequired,
+    minutes: PropTypes.oneOfType([
+      PropTypes.element,
+      PropTypes.number,
+      PropTypes.string,
+    ]),
+    seconds: PropTypes.oneOfType([
+      PropTypes.element,
+      PropTypes.number,
+      PropTypes.string,
+    ]),
   })).isRequired,
 };
 

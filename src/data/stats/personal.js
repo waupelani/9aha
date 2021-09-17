@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const endTime = new Date('2021-09-16T03:00:00');
+const endTime = new Date('2021-09-17T12:30:00');
 
 const Hour = () => {
   const [hour, setHour] = useState();
@@ -49,23 +49,18 @@ const Second = () => {
   }, []);
   return <>{second}</>;
 };
-
-const timedata = [
+const data = [
   {
-    key: 'age',
-    label: 'Hours remaining',
-    value: <Hour />,
+    hours: <Hour />,
+    minutes: <Minute />,
+    seconds: <Second />,
   },
   {
-    key: 'age',
-    label: 'Minutes remaining',
-    value: <Minute />,
-  },
-  {
-    key: 'age',
-    label: 'Seconds remaining',
-    value: <Second />,
+    hours: 'Hour',
+    minutes: 'Minutes',
+    seconds: 'Seconds',
   },
 ];
-
-export default timedata;
+export default {
+  data,
+};
