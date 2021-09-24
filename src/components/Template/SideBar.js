@@ -7,18 +7,19 @@ const SideBar = () => (
   <section id="sidebar">
     <section id="intro">
       <Link to="/" className="logo">
-        <img src={`${PUBLIC_URL}/images/profile.png`} alt="" />
+        <img src={`${PUBLIC_URL}/images/logo.webp`} alt="" />
       </Link>
       <header>
-        <h2>Personal Amazon Picks</h2>
+        <h2>Hi, I&apos;m Claire 👋🏼</h2>
       </header>
     </section>
 
     <section className="blurb">
-      <h2>2021 Summer Collection</h2>
+      <h2>Just another shopaholic&apos;s blog</h2>
+      <h2>TikTok@Waupelani</h2>
       <ul className="actions">
         <li>
-          {!window.location.pathname.includes('/about') ? <Link to="/about" className="button">Contact</Link> : <Link to="/" className="button">About 9AHA</Link>}
+          {!window.location.pathname.includes('/about') ? <Link to="/about" className="button">About Me</Link> : <Link to="/" className="button">Today&apos;s Deal</Link>}
         </li>
       </ul>
     </section>
