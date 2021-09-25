@@ -16,7 +16,6 @@ const SideBar = () => (
 
     <section className="blurb">
       <h2>Just another shopaholic&apos;s blog</h2>
-      <h2>TikTok@Waupelani</h2>
       <ul className="actions">
         <li>
           {!window.location.pathname.includes('/about') ? <Link to="/about" className="button">About Me</Link> : <Link to="/" className="button">Today&apos;s Deal</Link>}

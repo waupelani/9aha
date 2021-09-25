@@ -15,7 +15,7 @@ const Index = () => (
         <div className="title">
           <div>
             <h2>
-              Deal Ends in
+              These Great Deals End in..
             </h2>
             <p><Personal /></p>
           </div>
