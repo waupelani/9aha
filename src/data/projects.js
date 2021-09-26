@@ -12,7 +12,7 @@ const data = [
   },
   {
     title: '3',
-    link: 'https://amzn.to/3ESEGoY',
+    link: 'https://amzn.to/3ESEGoYd',
     image: '/images/projects/3.webp',
   },
 ];

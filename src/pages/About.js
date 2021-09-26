@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import raw from 'raw.macro';
+import Cell from '../components/Projects/Cell';
+import data from '../data/about-image';
 
 import Main from '../layouts/Main';
 
@@ -27,6 +29,12 @@ const About = () => (
           <p>(in about {count} words)</p>
         </div>
       </header>
+      {data.map((project) => (
+        <Cell
+          data={project}
+          key={project.title}
+        />
+      ))}
       <ReactMarkdown
         source={markdown}
         renderers={{
