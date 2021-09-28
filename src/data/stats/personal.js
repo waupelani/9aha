@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const endTime = new Date('2021-09-28T03:00:00');
+const endTime = new Date('2021-09-29T03:00:00');
 
 const Hour = () => {
   const [hour, setHour] = useState();
