@@ -2,18 +2,18 @@
 const data = [
   {
     title: '1',
-    link: 'https://amzn.to/3EY3yvc',
-    image: '/images/projects/1 (1).webp',
+    link: 'https://amzn.to/2Wj0icB',
+    image: '/images/projects/a3.webp',
   },
   {
     title: '2',
-    link: 'https://amzn.to/3ugOPXx',
-    image: '/images/projects/2 (1).webp',
+    link: 'https://amzn.to/3idqddu',
+    image: '/images/projects/a1.webp',
   },
   {
     title: '3',
-    link: 'https://amzn.to/3EUDpOc',
-    image: '/images/projects/3 (1).webp',
+    link: 'https://amzn.to/3F0nm1l',
+    image: '/images/projects/a2.webp',
   },
 ];
 
